@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/logoInfra.png" type="image/x-icon" />
+    <title>Accueil</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="/static/logoInfra.png" alt="Logo">
+            </div>
+            <div class="navbar-title">
+                DataGuardian
+            </div>
+            <div class="navbar-links">
+                <a href="/menu">Menu</a>
+                <a href="/automatisation">Automatisation</a>
+            </div>
+        </nav>
+    </header>
+    <div class="bobody">
+        <form action="/" method="POST">
+            <h1>Bienvenue</h1>
+            <br>
+            <p>Entrez l'ip du serveur distant</p>
+            <input type="text" id="Ip" name="Ip" placeholder="IP ...">
+            <br>
+            <p>Entrez le chemin du dossier que vous voulez sauvegarder</p>
+            <input type="text" id="Path" name="Path" placeholder="Chemin ...">
+            <input type="submit" value="Soumettre">
+        </form>
+    </div>
+</body>
+</html>

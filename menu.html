@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="icon" href="/static/logoInfra.png" type="image/x-icon" />
+
+        <title>Menu</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="navbar-logo">
+                    <img src="/static/logoInfra.png" alt="Logo">
+                </div>
+                <div class="navbar-title">
+                    DataGuardian
+                </div>
+                <div class="navbar-links">
+                    <a href="/menu">Menu</a>
+                    <a href="/automatisation">Automatisation</a>
+                </div>
+            </nav>
+        </header>
+        <div class="bobody">
+            <form action="/menu" method="POST">
+                <h1>Menu</h1>
+
+                <br>
+
+                <p>Ip de destination actuelle : {{.IP}}</p>
+                <input type="text" id="IP" name="IP" placeholder="Changer l'IP">
+                <input type="submit" value="Soumettre">
+
+                <br>
+                <br>
+                <br>
+
+                <p>Chemin du fichier à sauvegarder actuel : {{.Path}}</p>
+                <input type="text" id="Path" name="Path" placeholder="Changer le chemin">
+                <input type="submit" value="Soumettre">
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <button type="submit" name="action" value="upload">Sauvegarder</button>
+                <button type="submit" name="action" value="restore">Restaurer</button>
+
+                <br>
+                <br>
+
+                <p>{{.Message}}</p>
+            </form>
+        </div>
+    </body>
+</html>
